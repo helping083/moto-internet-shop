@@ -1,0 +1,149 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+body {
+  color: #2f3035;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: 'SFProDisplay-Regular', sans-serif;
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 122px;
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__item + .menu__item {
+  padding-left: 50px;
+}
+
+.header__box {
+  display: flex;
+}
+
+.header__adress {
+  margin-right: 60px;
+  width: 265px;
+  padding-left: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.header__adress::before {
+  content: "";
+  position: absolute;
+  background-image: url('../images/place.svg');
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: -10px;
+}
+.user-list {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.user-list__item {
+  padding-right: 10px;
+}
+.basket {
+  position: relative;
+}
+.basket__num {
+  position: absolute;
+  font-family: 'SFProDisplay-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color:#fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  bottom: -15px;
+  right: -5px;
+  line-height: 20px;
+  background-color: #1C62CD;
+}
+.header__bottom {
+  margin-bottom: 78px;
+}
+.menu-categories {
+  background-color: #F0F0F4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 53px;
+}
+
+.menu-categories__item {
+  position: relative;
+}
+
+.menu__categories__link {
+  font-weight: 400;
+  padding: 15px 0px 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu__categories__link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  background-color: #1C62CD;
+  height: 3px;
+  transition: left .2s ease-in-out, right .2s ease-in-out, width .2s ease-in-out;
+}
+
+.menu__categories__link:hover {
+  color: #000
+}
+
+.menu__categories__link:hover::before {
+  transition: left .2s ease-in-out, right .2s ease-in-out, width .2s ease-in-out;
+  width: 100%;
+  right: auto;
+  left: 0;
+  bottom: 0;
+}
