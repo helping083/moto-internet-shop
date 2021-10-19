@@ -119,10 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu__categories__link {
   font-weight: 400;
   padding: 15px 0px 14px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 }
 .menu__categories__link::before {
   content: '';
@@ -146,4 +143,66 @@ h1, h2, h3, h4, h5, h6 {
   right: auto;
   left: 0;
   bottom: 0;
+}
+
+.banner-section__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-section__slider {
+  max-width: 870px;
+}
+
+.banner-section__slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.banner-section__slider-btnprev {
+  left: 20px
+}
+
+.banner-section__slider-btnnext {
+  right: 20px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 0 9px;
+}
+
+.slick-dots button {
+  padding: 0px;
+  font-size: 0;
+  margin: 0px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.slick-active button {
+  background-color: white;
+}
+
+.sale-item {
+  max-width: 256px;
+  text-align: center;
 }
